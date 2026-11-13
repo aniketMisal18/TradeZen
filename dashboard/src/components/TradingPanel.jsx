@@ -17,9 +17,7 @@ const TradingPanel = ({ Stock }) => {
     const { livePrices } = usePrices();
     const { IsPanelOpen, setIsPanelOpen } = useGloble();
 
-    // =====================================================
-    // FORM
-    // =====================================================
+   
 
     const [form, setForm] = useState({
         qty: 1,
@@ -30,9 +28,7 @@ const TradingPanel = ({ Stock }) => {
     });
 
 
-    // =====================================================
-    // CLOSE PANEL
-    // =====================================================
+   
 
     const handleCancle = () => {
 
@@ -46,9 +42,7 @@ const TradingPanel = ({ Stock }) => {
     };
 
 
-    // =====================================================
-    // UPDATE FORM
-    // =====================================================
+   
 
     useEffect(() => {
 
@@ -80,9 +74,7 @@ const TradingPanel = ({ Stock }) => {
     ]);
 
 
-    // =====================================================
-    // HANDLE INPUT
-    // =====================================================
+ 
 
     const handleChange = (e) => {
 
@@ -96,18 +88,14 @@ const TradingPanel = ({ Stock }) => {
     };
 
 
-    // =====================================================
-    // SUBMIT ORDER
-    // =====================================================
+  
 
     const handleSubmit = async () => {
 
         const qty = Number(form.qty);
         const price = Number(form.price);
 
-        // ---------------------------------------------
-        // Validation
-        // ---------------------------------------------
+   
 
         if (!qty || qty <= 0) {
 
@@ -124,10 +112,7 @@ const TradingPanel = ({ Stock }) => {
         }
 
 
-        // ---------------------------------------------
-        // SELL quantity validation
-        // ---------------------------------------------
-
+     
         if (
             form.action === "SELL" &&
             IsPanelOpen.max != null &&
@@ -168,8 +153,7 @@ const TradingPanel = ({ Stock }) => {
 
                 console.log("Order successful:", data);
 
-                // IMPORTANT:
-                // Refresh account after BUY or SELL
+              
                 await getAccount();
 
                 if (form.action === "SELL") {
@@ -221,26 +205,21 @@ const TradingPanel = ({ Stock }) => {
     };
 
 
-    // =====================================================
-    // TOTAL ORDER VALUE
-    // =====================================================
+    
+   
 
     const totalValue =
         Number(form.qty || 0) *
         Number(form.price || 0);
 
 
-    // =====================================================
-    // UI
-    // =====================================================
+  
 
     return (
 
         <div className="trade-window">
 
-            {/* =================================================
-                HEADER
-            ================================================= */}
+           
 
             <div
                 className={
@@ -277,9 +256,6 @@ const TradingPanel = ({ Stock }) => {
             <div className="trade-body">
 
 
-                {/* =================================================
-                    ORDER TYPE
-                ================================================= */}
 
                 <div className="radio-group">
 
@@ -319,14 +295,11 @@ const TradingPanel = ({ Stock }) => {
                 </div>
 
 
-                {/* =================================================
-                    INPUTS
-                ================================================= */}
 
                 <div className="input-row">
 
 
-                    {/* Quantity */}
+                   
 
                     <div>
 
@@ -370,16 +343,7 @@ const TradingPanel = ({ Stock }) => {
                 </div>
 
 
-                {/* =================================================
-                    TOTAL
-                ================================================= */}
-
-
-
-
-                {/* =================================================
-                    FOOTER
-                ================================================= */}
+                
 
                 <div className="trade-footer">
 

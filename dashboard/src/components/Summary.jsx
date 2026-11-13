@@ -15,7 +15,7 @@ const Summary = () => {
 
   const [account, setAccount] = useState(null);
 
-  // ================= GET HOLDINGS =================
+  
 
   const getHoldings = async () => {
 
@@ -76,7 +76,7 @@ const Summary = () => {
   }, [Refresh]);
 
 
-  // ================= CALCULATE SUMMARY =================
+  
 
   const summary = useMemo(() => {
 
@@ -92,7 +92,7 @@ const Summary = () => {
         Number(holding.avgPrice) || 0;
 
 
-      // Get live Zerodha price
+     
       const livePrice =
         Number(livePrices?.[holding.symbol]?.ltp) ||
         avgPrice;
@@ -105,11 +105,11 @@ const Summary = () => {
     });
 
 
-    // Profit / Loss
+    
     const pnl = currentValue - investment;
 
 
-    // P&L percentage
+    
     const pnlPercentage =
       investment > 0
         ? (pnl / investment) * 100
@@ -126,7 +126,7 @@ const Summary = () => {
   }, [holdings, livePrices]);
 
 
-  // ================= FORMAT MONEY =================
+  
 
   const formatMoney = (value) => {
 
@@ -140,7 +140,7 @@ const Summary = () => {
   };
 
 
-  // ================= PROFIT / LOSS =================
+  
 
   const isProfit = summary.pnl >= 0;
 
@@ -153,7 +153,7 @@ const Summary = () => {
   return (
     <>
 
-      {/* ================= USER ================= */}
+     
 
       <div className="username">
 
@@ -166,7 +166,7 @@ const Summary = () => {
       </div>
 
 
-      {/* ================= EQUITY ================= */}
+      
 
       <div className="section">
 
@@ -213,7 +213,7 @@ const Summary = () => {
 </div>
 
 
-      {/* ================= HOLDINGS ================= */}
+      
 
       <div className="section">
 
@@ -227,7 +227,7 @@ const Summary = () => {
         <div className="data">
 
 
-          {/* ================= P&L ================= */}
+         
 
           <div className="firsts">
 
@@ -258,7 +258,7 @@ const Summary = () => {
           <hr />
 
 
-          {/* ================= HOLDING VALUES ================= */}
+         
 
           <div className="second">
 

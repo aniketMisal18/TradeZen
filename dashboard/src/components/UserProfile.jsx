@@ -14,12 +14,7 @@ const UserProfile = () => {
     const [amount, setAmount] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // ================= GET ACCOUNT =================
-
    
-
-
-    // ================= FORMAT MONEY =================
 
     const formatMoney = (value) => {
         return Number(value || 0).toLocaleString("en-IN", {

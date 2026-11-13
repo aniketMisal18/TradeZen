@@ -22,7 +22,7 @@ const Search = ({ stock }) => {
     );
 
 
-    // SUBSCRIBE TO LIVE PRICE
+   
 
     const subscribe = (symbol) => {
 
@@ -50,7 +50,6 @@ const Search = ({ stock }) => {
     };
 
 
-    // ADD / REMOVE WATCHLIST
 
     const UpdateWatchlist = async () => {
 
@@ -72,7 +71,7 @@ const Search = ({ stock }) => {
             console.log("Watchlist API response:", response.data);
 
 
-            // UPDATE REACT STATE
+            
 
             setUser(prev => {
 
@@ -105,7 +104,7 @@ const Search = ({ stock }) => {
             });
 
 
-            // SUBSCRIBE AFTER SUCCESSFUL ADD
+            
 
             if (job === "ADD") {
                 subscribe(stock.symbol);
