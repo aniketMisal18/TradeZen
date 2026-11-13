@@ -1,0 +1,21 @@
+.profits {
+  color: #26a641;
+  font-size: 2.5rem;
+font-weight: 300;
+display: flex;
+align-items: end;
+}
+
+.losses {
+  color: #df3f3f;
+  font-size: 2.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: end;
+}
+
+.profits p ,
+.losses p {
+  margin-left: 5px;
+  font-size: 13px;
+}
