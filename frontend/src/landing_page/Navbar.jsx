@@ -12,9 +12,9 @@ function Navbar() {
         <>
 
             <nav class="navbar navbar-expand-lg border-bottom bg-w">
-                <div class="container p-1">
+                <div class=" wrapoff container p-1 ">
                     <Link to={"/"}>
-                    <img src="media\images\logo.svg" alt="abc" class="navbar-brand" />
+                    <img src="media\images\logo.png" alt="abc" class="navbar-brand" />
                     </Link>
                     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,5 +1,5 @@
 .navbar-brand{
-    width:50%;
+    width:53%;
 }
 .bg-w{
     background-color: white;
@@ -13,4 +13,9 @@
 
 .nav-link{
     margin-left: 30px;
+}
+
+.wrapoff{
+    display: flex;
+    flex-wrap: nowrap;
 }

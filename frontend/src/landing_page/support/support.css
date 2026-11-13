@@ -1,0 +1,138 @@
+.support-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.support-header {
+    margin-bottom: 25px;
+}
+
+.support-header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.support-group input,
+.support-group select,
+.support-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: #fff;
+    color: #444;
+}
+
+.support-header p {
+    font-size: 14px;
+    color: #777;
+}
+
+.support-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.support-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.support-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.support-group input,
+.support-group select,
+.support-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: #fff;
+    color: #444;
+}
+
+.support-group input:focus,
+.support-group select:focus,
+.support-group textarea:focus {
+    border-color: #387ed1;
+}
+
+.support-group textarea {
+    resize: vertical;
+}
+
+.support-group input::placeholder,
+.support-group textarea::placeholder {
+    color: #aaa;
+}
+
+.support-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: #387ed1;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.support-submit:hover {
+    background: #2968b7;
+}
+
+.support-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.support-message {
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.support-message.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.support-message.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+@media (max-width: 600px) {
+    .support-container {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    .support-card {
+        padding: 18px;
+    }
+}
